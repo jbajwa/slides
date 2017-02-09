@@ -27,7 +27,10 @@
 				    <li>Why Webassembly? wasm vs asm.js</li>
 				    <li>Toolchain for Webassembly</li>
 				    <li>Enable wasm in browers</li>
+				    <li>V8 and WebAssembly</li>
 				    <li>Usecases</li>
+				    <li>Useful links</li>
+				    <li>Demo</li>
                                 </ul>
 			</section>
 			<!-- Slide 3 -->
@@ -87,7 +90,7 @@
 					<p>WebAssembly library to parse/emit, process and interpret wasm</p>
 					<ul>
 						<li>JS(asm.js) -> wasm </li>
-						<li>Binary-format (wasm) + Emiscrpt-en(uses Emscripten) = Binaryen</li>
+						<li>Binary-format (wasm) + Emscript-en(uses Emscripten) = Binaryen</li>
 						<li>Includes other tools</li>
 						<ul>
 							<li>asm2wasm which compiles asm.js</li>
@@ -99,7 +102,7 @@
 			<section>
 				<h3>wabt</h3>
 					<ul>
-						<li>wast2wasm: translate from s-expressions to the WebAssembly binary-encoding</li>
+						<li>wast2wasm: translate from <a href="https://en.wikipedia.org/wiki/S-expression">s-expressions</a> to the WebAssembly binary-encoding</li>
 						<li>wasm2wast: the inverse of wast2wasm</li>
 					</ul>
 			</section>
@@ -164,6 +167,14 @@ end
 			</section>
 			<!-- Slide 12 -->
 			<section>
+				<h3>V8 and WebAssembly</h3>
+					<ul>
+						<li>Currently supports wasm</li>
+						<li><i>asm-wasm-builder</i>, converts asm.js to wasm, uses new WebAssembly pipeline instead of the TurboFan JavaScript compiler pipeline</li>
+					</ul>
+			</section>
+			<!-- Slide 13 -->
+			<section>
 				<h3>Usecases</h3>
 					<ul>
 						<li>Inside the browser: Image/video editing, games, C/C++ apps (currently being cross-compiled)</li>
@@ -171,9 +182,19 @@ end
 						<li>More <a href="http://webassembly.org/docs/use-cases/">examples</a></li>
 					</ul>
 			</section>
-			<!-- Slide 13 -->
+			<!-- Slide 14 -->
 			<section>
-				<h3>WIP...</h3>
+				<h3>Useful links</h3>
+					<ul>
+						<li>WebAssembly <a href="http://webassembly.org">website</a></li>
+						<li><a href="https://github.com/webassembly/">Github</a></li>
+						<li><a href="http://benediktmeurer.de/2016/12/20/v8-behind-the-scenes-december-edition">V8 and WebAssebmly</a></li>
+						<li>JS API with examples on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">MDN</a></li>
+					</ul>
+			</section>
+			<!-- Slide 15 -->
+			<section>
+				<h2>Demo</h2>
 			</section>
 		</div>
 	</div>
