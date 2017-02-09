@@ -41,6 +41,12 @@
         button.value = 'Fibonacci';
         button.addEventListener('click', function() {
           var input = document.getElementById('x');
+          console.time("JS");
+          console.log(js_fib(input.value));
+          console.timeEnd("JS");
+          console.time("ASM.JS");
+          console.log(asm_fib(input.value));
+          console.timeEnd("ASM.JS");
           console.time("WASM");
           console.log(fib(input.value));
           console.timeEnd("WASM");
@@ -48,6 +54,26 @@
         }, false);
       }
     );
+function asm_fib_module(stdlib, foreign, heap) {
+  "use asm";
+  function fib_asm(n) {
+    n = n|0;
+    if (n >>> 0 < 3) {
+      return 1|0;
+    }
+    return (fib_asm((n-1)|0) + fib_asm((n-2)|0))|0;
+  }
+  return {
+    fib_asm:fib_asm
+  };
+}
+asm_fib = asm_fib_module(window).fib_asm;
+function js_fib(n) {
+  if (n < 3) {
+    return 1;
+  }
+  return js_fib(n-1) + js_fib(n-2);
+}
   </script>
 </head>
 <body>
