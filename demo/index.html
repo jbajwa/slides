@@ -35,8 +35,7 @@
     loadWebAssembly('fib.wasm')
       .then(instance => {
         var exports = instance.exports; // the exports of that instance
-        var fib = exports._fib; // the "doubler" function (note "_" prefix)
-        // now we are ready, set up the button so the user can run the code
+        var fib = exports._fib; 
         var button = document.getElementById('run');
         button.value = 'Fibonacci';
         button.addEventListener('click', function() {
