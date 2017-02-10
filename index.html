@@ -48,6 +48,28 @@
 					    <li>Text format: <em class="fragment highlight-current-blue">human-readable</em>, <em class="fragment highlight-current-blue"> debugging</em></li>
 					</ul>
 			</section>
+			<section>
+				<h3>Modules</h3>
+					<ul>
+					    <li>type section</li>
+					    <li>import section</li>
+					    <li>function section</li>
+					    <li>table section, element section</li>
+					    <li>memory section , data section</li>
+					    <li>global section</li>
+					    <li>export section</li>
+					    <li>code section</li>
+					    <li>Stack machine: Use virtual stack for operations</li>
+					</ul>
+			</section>
+			<section>
+				<h3>Memory</h3>
+					<ul>
+					    <li>Linear memory: all addresses are expressed in byte offset of beginning segment</li>
+					    <li>size of memory: multiple of wasm page size 64KiB</li>
+					    <li>Memory can be imported or declared by the module</li>
+					</ul>
+			</section>
 			<!-- Slide 5 -->
 			<section>
 				<h3>Why Webassembly? wasm vs asm.js</h3>
@@ -87,15 +109,9 @@
 			<!-- Slide 8 -->
 			<section>
 				<h3>Binaryen</h3>
-					<p>WebAssembly library to parse/emit, process and interpret wasm</p>
+					<p>WebAssembly library to parse/emit, process and interpret wasm. Binary-format (wasm) + Emscript-en(uses Emscripten) = Binaryen</p>
 					<ul>
 						<li>JS(asm.js) -> wasm </li>
-						<li>Binary-format (wasm) + Emscript-en(uses Emscripten) = Binaryen</li>
-						<li>Includes other tools</li>
-						<ul>
-							<li>asm2wasm which compiles asm.js</li>
-							<li>s2wasm which compiles the LLVM WebAssembly's backend .s output format</li>
-						</ul>
 					</ul>
 			</section>
 			<!-- Slide 9 -->
